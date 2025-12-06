@@ -126,7 +126,7 @@ def lbo_find_dominating_set(sensors, model, matrix, params)
                 )
                 new[position] = new_pos.tolist()
             else
-                new[position] = mutate(pop[i][position], 0.05nvar, sigma)
+                new[position] = mutate(pop[i][position], 0.05 * nvar, sigma)
 
             # binarize
             new[position] = [1 if v  0.5 else 0 for v in new[position]]
@@ -347,3 +347,4 @@ def main()
 
 if __name__ == __main__
     main()
+
